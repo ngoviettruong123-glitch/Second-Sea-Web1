@@ -1,0 +1,332 @@
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    margin-top: 4rem;
+    width: 100%;
+    height: 80vh;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Main ---------- */
+.main {
+    padding: 4rem 0;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.section-head h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.link-blue {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.link-blue:hover {
+    text-decoration: underline;
+}
+
+.link-blue i {
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+}
+
+/* ---------- Product grid ---------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover .add-to-cart {
+    transform: translateY(0);
+}
+
+.btn-cart {
+    width: 100%;
+    background: #000;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s;
+}
+
+.btn-cart:hover {
+    background: #1f2937;
+}
+
+.product-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s;
+}
+
+.product:hover .product-name {
+    color: #2563eb;
+}
+
+.price {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* ---------- Benefits ---------- */
+.benefits {
+    background: #f9fafb;
+    padding: 3rem 0;
+    border-top: 1px solid #f3f4f6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit i {
+    font-size: 1.875rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.benefit h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.benefit p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: #000;
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-desc {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.footer-col ul a {
+    transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+    color: #ffffff;
+}
+
+.hotline {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hotline span {
+    color: #3b82f6;
+}
+
+.hours {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: #9ca3af;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: #1f2937;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.social a.fb:hover {
+    background: #2563eb;
+}
+
+.social a.ig:hover {
+    background: #db2777;
+}
+
+.social a.tt:hover {
+    background: #000;
+    box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.newsletter-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.newsletter {
+    display: flex;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    background: #1f2937;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.newsletter input:focus {
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.newsletter button {
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #1d4ed8;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1f2937;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.footer-bottom .tags {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ---------- Scroll tới từng nhóm sản phẩm (tránh bị header che) ---------- */
+.product-grid {
+    scroll-margin-top: 5rem;
+}
+
+.product-grid + .product-grid {
+    margin-top: 4rem;
+}

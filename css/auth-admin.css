@@ -1,0 +1,302 @@
+/* ==========================================================================
+   Trang tài khoản: đăng nhập, đăng ký, profile, admin
+   ========================================================================== */
+.page-view {
+    min-height: 100vh;
+    background: #f9fafb;
+    padding: 6rem 0 4rem;
+}
+
+.auth-view {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.auth-card {
+    width: 420px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.auth-logo {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-switch {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.auth-switch a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.field input {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field input:focus {
+    border-color: #2563eb;
+}
+
+.field input:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.form-msg {
+    min-height: 1.25rem;
+    font-size: 0.875rem;
+    color: #dc2626;
+}
+
+.form-msg.is-success {
+    color: #16a34a;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+    background: #000;
+    color: #ffffff;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background: #1f2937;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+.btn-danger {
+    background: #ffffff;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+.btn-danger:hover {
+    background: #fef2f2;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.page-wrap {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-head h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.card .form .btn-primary,
+.card .form .btn-secondary {
+    align-self: flex-start;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.875rem;
+}
+
+.info-row span:first-child {
+    color: #6b7280;
+}
+
+.info-row span:last-child {
+    font-weight: 600;
+}
+
+.total-row {
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 0;
+    padding-top: 1rem;
+}
+
+.role-pill {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.role-pill.is-admin {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toolbar input {
+    width: 300px;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    outline: none;
+}
+
+.toolbar input:focus {
+    border-color: #2563eb;
+}
+
+.stats {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+}
+
+.user-table th,
+.user-table td {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.user-table th {
+    background: #f9fafb;
+    font-weight: 700;
+    color: #374151;
+}
+
+.user-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-table .actions button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+}
+
+.user-table select {
+    padding: 0.375rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font: inherit;
+}
+
+.empty-row td {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+}
+

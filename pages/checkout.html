@@ -1,0 +1,44 @@
+<section class="page-view" data-view="checkout" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Thanh toán</h1>
+            </div>
+            <div class="cart-layout checkout-layout">
+                <form class="card form" id="checkout-form">
+                    <h2>Thông tin giao hàng</h2>
+                    <label class="field">
+                        Họ và tên
+                        <input type="text" id="co-name" required>
+                    </label>
+                    <label class="field">
+                        Số điện thoại
+                        <input type="tel" id="co-phone" required>
+                    </label>
+                    <label class="field">
+                        Địa chỉ giao hàng
+                        <input type="text" id="co-address" required>
+                    </label>
+                    <label class="field">
+                        Ghi chú (không bắt buộc)
+                        <input type="text" id="co-note">
+                    </label>
+                    <fieldset class="payment">
+                        <legend>Phương thức thanh toán</legend>
+                        <label><input type="radio" name="payment" value="Thanh toán khi nhận hàng" checked> Thanh toán khi nhận hàng (COD)</label>
+                        <label><input type="radio" name="payment" value="Chuyển khoản ngân hàng"> Chuyển khoản ngân hàng</label>
+                    </fieldset>
+                    <button type="submit" class="btn-primary btn-full">Đặt hàng</button>
+                </form>
+                <aside class="card">
+                    <h2>Đơn hàng của bạn</h2>
+                    <div id="co-items"></div>
+                    <div class="info-row"><span>Tạm tính</span><span id="co-subtotal"></span></div>
+                    <div class="info-row"><span>Vận chuyển</span><span id="co-shipping"></span></div>
+                    <div class="info-row total-row"><span>Tổng cộng</span><span id="co-total"></span></div>
+                    <a href="#cart" class="link-blue muted">← Quay lại giỏ hàng</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ ĐĂNG NHẬP ============================ -->

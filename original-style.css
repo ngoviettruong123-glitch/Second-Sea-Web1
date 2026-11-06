@@ -1,0 +1,1002 @@
+/* ==========================================================================
+   SECOND SEA - CSS riêng (chỉ dùng cho bản PC)
+   ========================================================================== */
+
+/* ---------- Reset & nền tảng ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #111827;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: #000;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: #2563eb;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.icon-btn {
+    font-size: 1.25rem;
+    color: #374151;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: #000;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    margin-top: 4rem;
+    width: 100%;
+    height: 80vh;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Main ---------- */
+.main {
+    padding: 4rem 0;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.section-head h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.link-blue {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.link-blue:hover {
+    text-decoration: underline;
+}
+
+.link-blue i {
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+}
+
+/* ---------- Product grid ---------- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.product:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover .add-to-cart {
+    transform: translateY(0);
+}
+
+.btn-cart {
+    width: 100%;
+    background: #000;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s;
+}
+
+.btn-cart:hover {
+    background: #1f2937;
+}
+
+.product-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s;
+}
+
+.product:hover .product-name {
+    color: #2563eb;
+}
+
+.price {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* ---------- Benefits ---------- */
+.benefits {
+    background: #f9fafb;
+    padding: 3rem 0;
+    border-top: 1px solid #f3f4f6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefit i {
+    font-size: 1.875rem;
+    color: #374151;
+    margin-bottom: 0.75rem;
+}
+
+.benefit h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.benefit p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    background: #000;
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-desc {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+.footer-col ul a {
+    transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+    color: #ffffff;
+}
+
+.hotline {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.hotline span {
+    color: #3b82f6;
+}
+
+.hours {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: #9ca3af;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: #1f2937;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.social a.fb:hover {
+    background: #2563eb;
+}
+
+.social a.ig:hover {
+    background: #db2777;
+}
+
+.social a.tt:hover {
+    background: #000;
+    box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.newsletter-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.newsletter {
+    display: flex;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    background: #1f2937;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.newsletter input:focus {
+    box-shadow: 0 0 0 1px #3b82f6;
+}
+
+.newsletter button {
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #1d4ed8;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1f2937;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.footer-bottom .tags {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ---------- Scroll tới từng nhóm sản phẩm (tránh bị header che) ---------- */
+.product-grid {
+    scroll-margin-top: 5rem;
+}
+
+.product-grid + .product-grid {
+    margin-top: 4rem;
+}
+/* ==========================================================================
+   Tiện ích chung & header
+   ========================================================================== */
+[hidden] {
+    display: none !important;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.icon-btn {
+    position: relative;
+}
+
+.admin-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 9999px;
+}
+
+.muted {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-top: 0.75rem;
+}
+
+.empty-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+.section-title {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Trang tài khoản: đăng nhập, đăng ký, profile, admin
+   ========================================================================== */
+.page-view {
+    min-height: 100vh;
+    background: #f9fafb;
+    padding: 6rem 0 4rem;
+}
+
+.auth-view {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.auth-card {
+    width: 420px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.auth-logo {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.auth-card h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-switch {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.auth-switch a {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.field input {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-weight: 400;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.field input:focus {
+    border-color: #2563eb;
+}
+
+.field input:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+.form-msg {
+    min-height: 1.25rem;
+    font-size: 0.875rem;
+    color: #dc2626;
+}
+
+.form-msg.is-success {
+    color: #16a34a;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+    background: #000;
+    color: #ffffff;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background: #1f2937;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background: #f3f4f6;
+}
+
+.btn-danger {
+    background: #ffffff;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+.btn-danger:hover {
+    background: #fef2f2;
+}
+
+.btn-full {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.page-wrap {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-head h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.card h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.card .form .btn-primary,
+.card .form .btn-secondary {
+    align-self: flex-start;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.875rem;
+}
+
+.info-row span:first-child {
+    color: #6b7280;
+}
+
+.info-row span:last-child {
+    font-weight: 600;
+}
+
+.total-row {
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 0;
+    padding-top: 1rem;
+}
+
+.role-pill {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.role-pill.is-admin {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.toolbar input {
+    width: 300px;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    outline: none;
+}
+
+.toolbar input:focus {
+    border-color: #2563eb;
+}
+
+.stats {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+}
+
+.user-table th,
+.user-table td {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.user-table th {
+    background: #f9fafb;
+    font-weight: 700;
+    color: #374151;
+}
+
+.user-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.user-table .actions button {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+}
+
+.user-table select {
+    padding: 0.375rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font: inherit;
+}
+
+.empty-row td {
+    text-align: center;
+    color: #6b7280;
+    padding: 2rem;
+}
+
+/* ==========================================================================
+   Giỏ hàng & thanh toán
+   ========================================================================== */
+.cart-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 72px 1fr auto auto auto;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.cart-item img {
+    width: 72px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    background: #f3f4f6;
+}
+
+.cart-item h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.cart-line {
+    font-weight: 700;
+    font-size: 0.875rem;
+    min-width: 90px;
+    text-align: right;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.qty button {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+}
+
+.qty button:hover {
+    background: #f3f4f6;
+}
+
+.qty span {
+    padding: 0 0.75rem;
+    font-size: 0.875rem;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.link-remove {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #dc2626;
+}
+
+.link-remove:hover {
+    text-decoration: underline;
+}
+
+.payment {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.payment legend {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.payment label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.co-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.order-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+.order-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-box ul {
+    margin: 0.5rem 0 0.5rem 1.25rem;
+    color: #374151;
+}
+
+.order-total {
+    font-weight: 700;
+}
+
+/* ---------- Trang thanh toán: khung đơn hàng rộng hơn, giá không xuống dòng ---------- */
+.checkout-layout {
+    grid-template-columns: 1fr 460px;
+}
+
+.co-line {
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.co-line span:last-child {
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+/* ---------- Quản lý sản phẩm trong admin ---------- */
+.product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: end;
+}
+
+.product-form .form-msg,
+.product-form .btn-primary {
+    grid-column: 1 / -1;
+}
+
+.product-form .btn-primary {
+    justify-self: start;
+}
+
+.product-form input,
+.product-form select {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-weight: 400;
+    outline: none;
+    background: #ffffff;
+}
+
+.thumb {
+    width: 48px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    background: #f3f4f6;
+}

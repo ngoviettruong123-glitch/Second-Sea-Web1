@@ -1,0 +1,83 @@
+<section class="page-view" data-view="admin" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Quản lý người dùng</h1>
+                <button class="btn-secondary logout-btn" data-logout>Đăng xuất</button>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="search" placeholder="Tìm theo tên hoặc email...">
+                <span class="stats" id="stats"></span>
+            </div>
+
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Họ và tên</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Vai trò</th>
+                        <th>Ngày tạo</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="user-rows"></tbody>
+            </table>
+
+            <h2 class="section-title">Sản phẩm</h2>
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <form id="product-form" class="product-form">
+                    <label class="field">
+                        Tên sản phẩm
+                        <input type="text" id="pf-name" required>
+                    </label>
+                    <label class="field">
+                        Giá (USD)
+                        <input type="number" id="pf-price" min="1" step="1" required>
+                    </label>
+                    <label class="field">
+                        Nhóm
+                        <select id="pf-group">
+                            <option value="t-shirt">T-Shirt</option>
+                            <option value="jacket">Jacket</option>
+                            <option value="pants">Pants</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        Ảnh (tối đa 1.5MB)
+                        <input type="file" id="pf-image" accept="image/*" required>
+                    </label>
+                    <p class="form-msg" id="pf-msg"></p>
+                    <button type="submit" class="btn-primary">Thêm sản phẩm</button>
+                </form>
+            </div>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Nhóm</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="product-rows"></tbody>
+            </table>
+
+            <h2 class="section-title">Đơn hàng</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Thanh toán</th>
+                        <th>Ngày đặt</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="order-rows"></tbody>
+            </table>
+        </div>
+    </section>

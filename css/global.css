@@ -1,0 +1,187 @@
+/* ==========================================================================
+   SECOND SEA - CSS riêng (chỉ dùng cho bản PC)
+   ========================================================================== */
+
+/* ---------- Reset & nền tảng ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #111827;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font: inherit;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 50;
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: #000;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1f2937;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: #2563eb;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.icon-btn {
+    font-size: 1.25rem;
+    color: #374151;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.icon-btn:hover {
+    color: #000;
+}
+
+/* ==========================================================================
+   Tiện ích chung & header
+   ========================================================================== */
+[hidden] {
+    display: none !important;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.icon-btn {
+    position: relative;
+}
+
+.admin-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.admin-link:hover {
+    text-decoration: underline;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -8px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 9999px;
+}
+
+.muted {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-top: 0.75rem;
+}
+
+.empty-text {
+    color: #6b7280;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+}
+
+.section-title {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+

@@ -1,0 +1,72 @@
+<section class="page-view" data-view="profile" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Tài khoản của tôi</h1>
+                <div style="display:flex; gap:1rem; align-items:center;">
+                    <span class="role-pill" id="role-pill"></span>
+                    <button class="btn-secondary logout-btn" data-logout>Đăng xuất</button>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <section class="card">
+                    <h2>Thông tin cá nhân</h2>
+                    <form id="info-form" class="form">
+                        <label class="field">
+                            Họ và tên
+                            <input type="text" id="p-name" required>
+                        </label>
+                        <label class="field">
+                            Email
+                            <input type="email" id="p-email" disabled>
+                        </label>
+                        <label class="field">
+                            Số điện thoại
+                            <input type="tel" id="p-phone">
+                        </label>
+                        <label class="field">
+                            Địa chỉ giao hàng
+                            <input type="text" id="p-address">
+                        </label>
+                        <p class="form-msg" id="info-msg"></p>
+                        <button type="submit" class="btn-primary">Lưu thay đổi</button>
+                    </form>
+                </section>
+
+                <div>
+                    <section class="card" style="margin-bottom: 1.5rem;">
+                        <h2>Thông tin tài khoản</h2>
+                        <div class="info-row"><span>Ngày tạo</span><span id="p-created"></span></div>
+                        <div class="info-row"><span>Vai trò</span><span id="p-role"></span></div>
+                    </section>
+
+                    <section class="card">
+                        <h2>Đổi mật khẩu</h2>
+                        <form id="pw-form" class="form">
+                            <label class="field">
+                                Mật khẩu hiện tại
+                                <input type="password" id="pw-current" required>
+                            </label>
+                            <label class="field">
+                                Mật khẩu mới (tối thiểu 6 ký tự)
+                                <input type="password" id="pw-new" minlength="6" required>
+                            </label>
+                            <label class="field">
+                                Nhập lại mật khẩu mới
+                                <input type="password" id="pw-confirm" minlength="6" required>
+                            </label>
+                            <p class="form-msg" id="pw-msg"></p>
+                            <button type="submit" class="btn-secondary">Đổi mật khẩu</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <section class="card" style="margin-top: 1.5rem;">
+                <h2>Đơn hàng của tôi</h2>
+                <div id="my-orders"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- ============================ ADMIN ============================ -->

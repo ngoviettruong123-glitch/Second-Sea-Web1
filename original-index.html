@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seacond sea - Mặc Mỗi Ngày, Thoải Mái Mỗi Ngày</title>
+    <!-- CSS riêng của trang (không dùng Tailwind) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <div>
+                <a href="#" class="logo">SECOND SEA</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav">
+                <a href="#t-shirt">T-Shirt</a>
+                <a href="#jacket">Jacket</a>
+                <a href="#pants">Pants</a>
+                <a href="#accessories">Accessories</a>
+            </nav>
+
+            <!-- Right Actions (Search, User, Cart, Menu) -->
+            <div class="header-actions">
+                <a href="#admin" id="admin-link" class="admin-link" hidden>Quản trị</a>
+                <a href="#login" id="user-link" class="icon-btn" aria-label="Tài khoản">
+                    <i class="far fa-user"></i>
+                </a>
+                <a href="#cart" class="icon-btn" aria-label="Giỏ hàng">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cart-count" hidden>0</span>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <section data-view="shop">
+
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <img src="https://balenciaga.dam.kering.com/asset/112a51f2-30f5-4075-8a9c-85c19ab0ee23/Large/HP_DK_2x1_2600x1300_Bal-com-HP-Desktop_SKI_CAMPAIGN_5889-42_03_SAFEZONE_NOLOGO.jpg" alt="Hero Banner">
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main">
+
+        <!-- Section Header -->
+        <div class="section-head" id="new-arrivals">
+            <h2>Sản phẩm mới</h2>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="t-shirt"></div>
+        <div class="product-grid" id="jacket"></div>
+        <div class="product-grid" id="pants"></div>
+        <div class="product-grid" id="accessories"></div>
+    </main>
+
+    <!-- Value Propositions -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <i class="fas fa-truck-fast"></i>
+                    <h4>Giao hàng nhanh</h4>
+                    <p>Miễn phí cho đơn từ $ 300</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-rotate-left"></i>
+                    <h4>Đổi trả 60 ngày</h4>
+                    <p>Miễn phí đổi trả mọi lý do</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-phone-volume"></i>
+                    <h4>Hotline 1900 XXXX</h4>
+                    <p>Hỗ trợ từ 8h30 - 22h00</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-shirt"></i>
+                    <h4>Chất lượng đảm bảo</h4>
+                    <p>Trust me bro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- About -->
+                <div class="footer-col">
+                    <h3 class="footer-logo">SEACOND SEA</h3>
+                    <p class="footer-desc">
+                        Second sea đem lại giải pháp mua sắm đồ cơ bản cho nam giới với mô hình mua sắm tiện lợi, chất lượng tốt và giá cả hợp lý.
+                    </p>
+                </div>
+
+                <!-- Policies -->
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul>
+                        <li><a >Chính sách đổi trả 60 ngày</a></li>
+                        <li><a >Chính sách khuyến mãi</a></li>
+                        <li><a >Chính sách bảo mật</a></li>
+                        <li><a >Chính sách giao hàng</a></li>
+                    </ul>
+                </div>
+
+                <!-- Customer Care -->
+                <div class="footer-col">
+                    <h4>Chăm sóc khách hàng</h4>
+                    <ul>
+                        <li><a >Trải nghiệm mua sắm 100% hài lòng</a></li>
+                        <li><a >Hỏi đáp - FAQs</a></li>
+                        <li>
+                            <p class="hotline">Hotline: <span>1900 XXXX</span></p>
+                            <p class="hours">Từ Thứ 2 - Thứ 7 (08:30 - 22:00)</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-col">
+                    <h4>Đăng ký nhận tin</h4>
+                    <p class="newsletter-text">Nhận thông tin các chương trình khuyến mãi mới nhất từ Seacond sea.</p>
+                    <form class="newsletter" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!');">
+                        <input type="email" placeholder="Email của bạn" required>
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </section>
+
+    <!-- ============================ GIỎ HÀNG ============================ -->
+    <section class="page-view" data-view="cart" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Giỏ hàng</h1>
+            </div>
+            <div class="cart-layout">
+                <div class="card" id="cart-list"></div>
+                <aside class="card" id="cart-summary">
+                    <h2>Tóm tắt đơn hàng</h2>
+                    <div class="info-row"><span>Tạm tính</span><span id="sum-subtotal"></span></div>
+                    <div class="info-row"><span>Vận chuyển</span><span id="sum-shipping"></span></div>
+                    <div class="info-row total-row"><span>Tổng cộng</span><span id="sum-total"></span></div>
+                    <p class="muted" id="shipping-note"></p>
+                    <button class="btn-primary btn-full" id="cart-checkout">Tiến hành thanh toán</button>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ THANH TOÁN ============================ -->
+    <section class="page-view" data-view="checkout" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Thanh toán</h1>
+            </div>
+            <div class="cart-layout checkout-layout">
+                <form class="card form" id="checkout-form">
+                    <h2>Thông tin giao hàng</h2>
+                    <label class="field">
+                        Họ và tên
+                        <input type="text" id="co-name" required>
+                    </label>
+                    <label class="field">
+                        Số điện thoại
+                        <input type="tel" id="co-phone" required>
+                    </label>
+                    <label class="field">
+                        Địa chỉ giao hàng
+                        <input type="text" id="co-address" required>
+                    </label>
+                    <label class="field">
+                        Ghi chú (không bắt buộc)
+                        <input type="text" id="co-note">
+                    </label>
+                    <fieldset class="payment">
+                        <legend>Phương thức thanh toán</legend>
+                        <label><input type="radio" name="payment" value="Thanh toán khi nhận hàng" checked> Thanh toán khi nhận hàng (COD)</label>
+                        <label><input type="radio" name="payment" value="Chuyển khoản ngân hàng"> Chuyển khoản ngân hàng</label>
+                    </fieldset>
+                    <button type="submit" class="btn-primary btn-full">Đặt hàng</button>
+                </form>
+                <aside class="card">
+                    <h2>Đơn hàng của bạn</h2>
+                    <div id="co-items"></div>
+                    <div class="info-row"><span>Tạm tính</span><span id="co-subtotal"></span></div>
+                    <div class="info-row"><span>Vận chuyển</span><span id="co-shipping"></span></div>
+                    <div class="info-row total-row"><span>Tổng cộng</span><span id="co-total"></span></div>
+                    <a href="#cart" class="link-blue muted">← Quay lại giỏ hàng</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ ĐĂNG NHẬP ============================ -->
+    <section class="page-view auth-view" data-view="login" hidden>
+        <div class="auth-card">
+            <a href="#" class="auth-logo">SECOND SEA</a>
+            <h1>Đăng nhập</h1>
+            <form id="login-form" class="form">
+                <label class="field">
+                    Email
+                    <input type="email" id="login-email" required>
+                </label>
+                <label class="field">
+                    Mật khẩu
+                    <input type="password" id="login-password" required>
+                </label>
+                <p class="form-msg" id="login-msg"></p>
+                <button type="submit" class="btn-primary">Đăng nhập</button>
+            </form>
+            <p class="auth-switch">Chưa có tài khoản? <a href="#register">Đăng ký</a></p>
+        </div>
+    </section>
+
+    <!-- ============================ ĐĂNG KÝ ============================ -->
+    <section class="page-view auth-view" data-view="register" hidden>
+        <div class="auth-card">
+            <a href="#" class="auth-logo">SECOND SEA</a>
+            <h1>Đăng ký</h1>
+            <form id="register-form" class="form">
+                <label class="field">
+                    Họ và tên
+                    <input type="text" id="reg-name" required>
+                </label>
+                <label class="field">
+                    Email
+                    <input type="email" id="reg-email" required>
+                </label>
+                <label class="field">
+                    Số điện thoại
+                    <input type="tel" id="reg-phone">
+                </label>
+                <label class="field">
+                    Mật khẩu (tối thiểu 6 ký tự)
+                    <input type="password" id="reg-password" minlength="6" required>
+                </label>
+                <label class="field">
+                    Nhập lại mật khẩu
+                    <input type="password" id="reg-confirm" minlength="6" required>
+                </label>
+                <p class="form-msg" id="reg-msg"></p>
+                <button type="submit" class="btn-primary">Tạo tài khoản</button>
+            </form>
+            <p class="auth-switch">Đã có tài khoản? <a href="#login">Đăng nhập</a></p>
+        </div>
+    </section>
+
+    <!-- ============================ PROFILE ============================ -->
+    <section class="page-view" data-view="profile" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Tài khoản của tôi</h1>
+                <div style="display:flex; gap:1rem; align-items:center;">
+                    <span class="role-pill" id="role-pill"></span>
+                    <button class="btn-secondary logout-btn" data-logout>Đăng xuất</button>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <section class="card">
+                    <h2>Thông tin cá nhân</h2>
+                    <form id="info-form" class="form">
+                        <label class="field">
+                            Họ và tên
+                            <input type="text" id="p-name" required>
+                        </label>
+                        <label class="field">
+                            Email
+                            <input type="email" id="p-email" disabled>
+                        </label>
+                        <label class="field">
+                            Số điện thoại
+                            <input type="tel" id="p-phone">
+                        </label>
+                        <label class="field">
+                            Địa chỉ giao hàng
+                            <input type="text" id="p-address">
+                        </label>
+                        <p class="form-msg" id="info-msg"></p>
+                        <button type="submit" class="btn-primary">Lưu thay đổi</button>
+                    </form>
+                </section>
+
+                <div>
+                    <section class="card" style="margin-bottom: 1.5rem;">
+                        <h2>Thông tin tài khoản</h2>
+                        <div class="info-row"><span>Ngày tạo</span><span id="p-created"></span></div>
+                        <div class="info-row"><span>Vai trò</span><span id="p-role"></span></div>
+                    </section>
+
+                    <section class="card">
+                        <h2>Đổi mật khẩu</h2>
+                        <form id="pw-form" class="form">
+                            <label class="field">
+                                Mật khẩu hiện tại
+                                <input type="password" id="pw-current" required>
+                            </label>
+                            <label class="field">
+                                Mật khẩu mới (tối thiểu 6 ký tự)
+                                <input type="password" id="pw-new" minlength="6" required>
+                            </label>
+                            <label class="field">
+                                Nhập lại mật khẩu mới
+                                <input type="password" id="pw-confirm" minlength="6" required>
+                            </label>
+                            <p class="form-msg" id="pw-msg"></p>
+                            <button type="submit" class="btn-secondary">Đổi mật khẩu</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+
+            <section class="card" style="margin-top: 1.5rem;">
+                <h2>Đơn hàng của tôi</h2>
+                <div id="my-orders"></div>
+            </section>
+        </div>
+    </section>
+
+    <!-- ============================ ADMIN ============================ -->
+    <section class="page-view" data-view="admin" hidden>
+        <div class="page-wrap">
+            <div class="page-head">
+                <h1>Quản lý người dùng</h1>
+                <button class="btn-secondary logout-btn" data-logout>Đăng xuất</button>
+            </div>
+
+            <div class="toolbar">
+                <input type="search" id="search" placeholder="Tìm theo tên hoặc email...">
+                <span class="stats" id="stats"></span>
+            </div>
+
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Họ và tên</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Vai trò</th>
+                        <th>Ngày tạo</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="user-rows"></tbody>
+            </table>
+
+            <h2 class="section-title">Sản phẩm</h2>
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <form id="product-form" class="product-form">
+                    <label class="field">
+                        Tên sản phẩm
+                        <input type="text" id="pf-name" required>
+                    </label>
+                    <label class="field">
+                        Giá (USD)
+                        <input type="number" id="pf-price" min="1" step="1" required>
+                    </label>
+                    <label class="field">
+                        Nhóm
+                        <select id="pf-group">
+                            <option value="t-shirt">T-Shirt</option>
+                            <option value="jacket">Jacket</option>
+                            <option value="pants">Pants</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        Ảnh (tối đa 1.5MB)
+                        <input type="file" id="pf-image" accept="image/*" required>
+                    </label>
+                    <p class="form-msg" id="pf-msg"></p>
+                    <button type="submit" class="btn-primary">Thêm sản phẩm</button>
+                </form>
+            </div>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Ảnh</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Nhóm</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="product-rows"></tbody>
+            </table>
+
+            <h2 class="section-title">Đơn hàng</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Mã đơn</th>
+                        <th>Khách hàng</th>
+                        <th>Tổng tiền</th>
+                        <th>Thanh toán</th>
+                        <th>Ngày đặt</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody id="order-rows"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        /* ==================================================================
+           JAVASCRIPT
+           ================================================================== */
+        const $ = id => document.getElementById(id);
+
+        /* ---------- Tiện ích ---------- */
+        const fmt = n => '$ ' + Number(n).toLocaleString('en-US');
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[c]));
+        }
+
+        /* ---------- Tài khoản (lưu trong localStorage) ----------
+           CẢNH BÁO: mật khẩu lưu dạng văn bản thường. Chỉ dùng để thử nghiệm. */
+        const USERS_KEY = 'ss_users';
+        const SESSION_KEY = 'ss_session';
+
+        function getUsers() {
+            return JSON.parse(localStorage.getItem(USERS_KEY) || '[]');
+        }
+
+        function saveUsers(users) {
+            localStorage.setItem(USERS_KEY, JSON.stringify(users));
+        }
+
+        function newId() {
+            return 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+        }
+
+        (function seedAdmin() {
+            const users = getUsers();
+            if (!users.some(u => u.role === 'admin')) {
+                users.push({
+                    id: 'admin-1',
+                    name: 'Admin',
+                    email: 'admin@secondsea.vn',
+                    password: 'admin123',
+                    phone: '',
+                    address: '',
+                    role: 'admin',
+                    protected: true,
+                    createdAt: new Date().toISOString()
+                });
+                saveUsers(users);
+            }
+        })();
+
+        function register({ name, email, password, phone = '' }) {
+            email = email.trim().toLowerCase();
+            const users = getUsers();
+            if (users.some(u => u.email === email)) {
+                throw new Error('Email này đã được đăng ký.');
+            }
+            const user = {
+                id: newId(),
+                name: name.trim(),
+                email,
+                password,
+                phone: phone.trim(),
+                address: '',
+                role: 'customer',
+                createdAt: new Date().toISOString()
+            };
+            users.push(user);
+            saveUsers(users);
+            return user;
+        }
+
+        function login(email, password) {
+            const user = getUsers().find(
+                u => u.email === email.trim().toLowerCase() && u.password === password
+            );
+            if (!user) throw new Error('Email hoặc mật khẩu không đúng.');
+            localStorage.setItem(SESSION_KEY, user.id);
+            return user;
+        }
+
+        function logout() {
+            localStorage.removeItem(SESSION_KEY);
+        }
+
+        function currentUser() {
+            const id = localStorage.getItem(SESSION_KEY);
+            if (!id) return null;
+            return getUsers().find(u => u.id === id) || null;
+        }
+
+        function isLoggedIn() {
+            return currentUser() !== null;
+        }
+
+        function isAdmin() {
+            const u = currentUser();
+            return !!u && u.role === 'admin';
+        }
+
+        function updateUser(id, changes) {
+            const users = getUsers();
+            const i = users.findIndex(u => u.id === id);
+            if (i === -1) throw new Error('Không tìm thấy tài khoản.');
+            users[i] = { ...users[i], ...changes };
+            saveUsers(users);
+            return users[i];
+        }
+
+        function deleteUser(id) {
+            saveUsers(getUsers().filter(u => u.id !== id || u.protected));
+        }
+
+        /* ---------- Giỏ hàng ---------- */
+        const CART_KEY = 'ss_cart';
+        const ORDERS_KEY = 'ss_orders';
+        const SHIPPING_FREE_FROM = 300;   // đơn từ $300 được miễn phí vận chuyển
+        const SHIPPING_FEE = 15;          // phí vận chuyển khi chưa đủ điều kiện
+        const ORDER_STATUSES = ['Chờ xác nhận', 'Đang giao', 'Đã giao', 'Đã hủy'];
+
+        function getCart() {
+            return JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem(CART_KEY, JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        function addToCart(product) {
+            const cart = getCart();
+            const item = cart.find(i => i.id === product.id);
+            if (item) item.qty += 1;
+            else cart.push({ ...product, qty: 1 });
+            saveCart(cart);
+        }
+
+        function changeQty(id, delta) {
+            let cart = getCart();
+            const item = cart.find(i => i.id === id);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) cart = cart.filter(i => i.id !== id);
+            saveCart(cart);
+        }
+
+        function removeFromCart(id) {
+            saveCart(getCart().filter(i => i.id !== id));
+        }
+
+        function cartTotals(cart) {
+            const subtotal = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+            const shipping = subtotal === 0 ? 0 : (subtotal >= SHIPPING_FREE_FROM ? 0 : SHIPPING_FEE);
+            return { subtotal, shipping, total: subtotal + shipping };
+        }
+
+        function updateCartCount() {
+            const count = getCart().reduce((sum, i) => sum + i.qty, 0);
+            $('cart-count').textContent = count;
+            $('cart-count').hidden = count === 0;
+        }
+
+        function renderCart() {
+            const cart = getCart();
+            if (cart.length === 0) {
+                $('cart-list').innerHTML = '<p class="empty-text">Giỏ hàng đang trống. <a href="#" class="link-blue">Tiếp tục mua sắm</a></p>';
+                $('cart-summary').hidden = true;
+                return;
+            }
+            $('cart-summary').hidden = false;
+            $('cart-list').innerHTML = cart.map(i => `
+                <div class="cart-item">
+                    <img src="${escapeHtml(i.image)}" alt="">
+                    <div>
+                        <h3>${escapeHtml(i.name)}</h3>
+                        <p>${fmt(i.price)}</p>
+                    </div>
+                    <div class="qty">
+                        <button data-qty="-1" data-id="${escapeHtml(i.id)}">−</button>
+                        <span>${i.qty}</span>
+                        <button data-qty="1" data-id="${escapeHtml(i.id)}">+</button>
+                    </div>
+                    <div class="cart-line">${fmt(i.price * i.qty)}</div>
+                    <button class="link-remove" data-remove="${escapeHtml(i.id)}">Xóa</button>
+                </div>`).join('');
+
+            const t = cartTotals(cart);
+            $('sum-subtotal').textContent = fmt(t.subtotal);
+            $('sum-shipping').textContent = t.shipping === 0 ? 'Miễn phí' : fmt(t.shipping);
+            $('sum-total').textContent = fmt(t.total);
+            $('shipping-note').textContent = t.subtotal >= SHIPPING_FREE_FROM
+                ? ''
+                : `Miễn phí vận chuyển cho đơn từ ${fmt(SHIPPING_FREE_FROM)}`;
+        }
+
+        /* ---------- Thanh toán & đơn hàng ---------- */
+        function renderCheckout() {
+            const user = currentUser();
+            const cart = getCart();
+            if (!user || cart.length === 0) return;
+
+            $('co-name').value = user.name;
+            $('co-phone').value = user.phone || '';
+            $('co-address').value = user.address || '';
+
+            $('co-items').innerHTML = cart.map(i =>
+                `<div class="co-line"><span>${escapeHtml(i.name)} × ${i.qty}</span><span>${fmt(i.price * i.qty)}</span></div>`
+            ).join('');
+
+            const t = cartTotals(cart);
+            $('co-subtotal').textContent = fmt(t.subtotal);
+            $('co-shipping').textContent = t.shipping === 0 ? 'Miễn phí' : fmt(t.shipping);
+            $('co-total').textContent = fmt(t.total);
+        }
+
+        function getOrders() {
+            return JSON.parse(localStorage.getItem(ORDERS_KEY) || '[]');
+        }
+
+        function saveOrders(orders) {
+            localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
+        }
+
+        function updateOrder(id, changes) {
+            const orders = getOrders();
+            const i = orders.findIndex(o => o.id === id);
+            if (i === -1) return;
+            orders[i] = { ...orders[i], ...changes };
+            saveOrders(orders);
+        }
+
+        function renderMyOrders() {
+            const user = currentUser();
+            const mine = getOrders().filter(o => o.userId === user.id).reverse();
+            $('my-orders').innerHTML = mine.length
+                ? mine.map(o => `
+                    <div class="order-box">
+                        <div class="order-head">
+                            <strong>${escapeHtml(o.id)}</strong>
+                            <span class="role-pill">${escapeHtml(o.status)}</span>
+                        </div>
+                        <p class="muted">${new Date(o.createdAt).toLocaleString('vi-VN')} · ${escapeHtml(o.payment)}</p>
+                        <ul>${o.items.map(i => `<li>${escapeHtml(i.name)} × ${i.qty}</li>`).join('')}</ul>
+                        <p class="order-total">Tổng: ${fmt(o.total)}</p>
+                    </div>`).join('')
+                : '<p class="empty-text">Bạn chưa có đơn hàng nào.</p>';
+        }
+
+        function renderAdminOrders() {
+            const orders = getOrders().slice().reverse();
+            $('order-rows').innerHTML = orders.length
+                ? orders.map(o => `
+                    <tr>
+                        <td>${escapeHtml(o.id)}</td>
+                        <td>${escapeHtml(o.customer.name)}<br><small>${escapeHtml(o.customer.phone)}</small></td>
+                        <td>${fmt(o.total)}</td>
+                        <td>${escapeHtml(o.payment)}</td>
+                        <td>${new Date(o.createdAt).toLocaleDateString('vi-VN')}</td>
+                        <td>
+                            <select data-order="${escapeHtml(o.id)}">
+                                ${ORDER_STATUSES.map(s => `<option value="${s}" ${s === o.status ? 'selected' : ''}>${s}</option>`).join('')}
+                            </select>
+                        </td>
+                    </tr>`).join('')
+                : '<tr class="empty-row"><td colspan="6">Chưa có đơn hàng nào.</td></tr>';
+        }
+
+        /* ---------- Profile ---------- */
+        function renderProfile() {
+            const user = currentUser();
+            if (!user) return;
+            $('p-name').value = user.name;
+            $('p-email').value = user.email;
+            $('p-phone').value = user.phone || '';
+            $('p-address').value = user.address || '';
+            $('p-created').textContent = new Date(user.createdAt).toLocaleDateString('vi-VN');
+            $('p-role').textContent = user.role === 'admin' ? 'Quản trị viên' : 'Khách hàng';
+            $('role-pill').textContent = user.role === 'admin' ? 'ADMIN' : 'KHÁCH HÀNG';
+            $('role-pill').classList.toggle('is-admin', user.role === 'admin');
+            $('info-msg').textContent = '';
+            $('info-msg').classList.remove('is-success');
+        }
+
+        /* ---------- Admin ---------- */
+        function renderAdmin() {
+            const me = currentUser();
+            const all = getUsers();
+            const q = $('search').value.trim().toLowerCase();
+            const users = all.filter(u =>
+                !q || u.name.toLowerCase().includes(q) || u.email.toLowerCase().includes(q)
+            );
+
+            $('stats').textContent =
+                `Tổng: ${all.length} tài khoản · Admin: ${all.filter(u => u.role === 'admin').length}`;
+
+            if (users.length === 0) {
+                $('user-rows').innerHTML = '<tr class="empty-row"><td colspan="6">Không có tài khoản nào.</td></tr>';
+                return;
+            }
+
+            $('user-rows').innerHTML = users.map(u => {
+                const isSelf = u.id === me.id;
+                const locked = isSelf || u.protected;
+                const isAdminRole = u.role === 'admin';
+                return `
+                    <tr>
+                        <td>${escapeHtml(u.name)}${isSelf ? ' <em>(bạn)</em>' : ''}</td>
+                        <td>${escapeHtml(u.email)}</td>
+                        <td>${escapeHtml(u.phone || '—')}</td>
+                        <td><span class="role-pill ${isAdminRole ? 'is-admin' : ''}">${isAdminRole ? 'Admin' : 'Khách hàng'}</span></td>
+                        <td>${new Date(u.createdAt).toLocaleDateString('vi-VN')}</td>
+                        <td>
+                            <div class="actions">
+                                <button class="btn-secondary" data-action="role" data-id="${u.id}" ${locked ? 'disabled' : ''}>
+                                    ${isAdminRole ? 'Hạ quyền' : 'Cấp admin'}
+                                </button>
+                                <button class="btn-danger" data-action="delete" data-id="${u.id}" ${locked ? 'disabled' : ''}>
+                                    Xóa
+                                </button>
+                            </div>
+                        </td>
+                    </tr>`;
+            }).join('');
+        }
+
+        /* ---------- Điều hướng (ẩn/hiện theo hash) ---------- */
+        const VIEWS = ['login', 'register', 'profile', 'admin', 'cart', 'checkout'];
+        const PRODUCT_GROUPS = ['t-shirt', 'jacket', 'pants', 'accessories'];
+
+        function updateHeader() {
+            const user = currentUser();
+            $('user-link').href = user ? '#profile' : '#login';
+            $('admin-link').hidden = !(user && user.role === 'admin');
+            updateCartCount();
+        }
+
+        function route() {
+            const hash = location.hash.slice(1);
+            let view = VIEWS.includes(hash) ? hash : 'shop';
+
+            if (['profile', 'admin', 'checkout'].includes(view) && !isLoggedIn()) {
+                sessionStorage.setItem('ss_next', view);
+                view = 'login';
+                history.replaceState(null, '', '#login');
+            }
+            if (view === 'admin' && !isAdmin()) {
+                view = 'profile';
+                history.replaceState(null, '', '#profile');
+            }
+            if (view === 'checkout' && getCart().length === 0) {
+                view = 'cart';
+                history.replaceState(null, '', '#cart');
+            }
+
+            document.querySelectorAll('[data-view]').forEach(el => {
+                el.hidden = el.dataset.view !== view;
+            });
+
+            updateHeader();
+
+            if (view === 'profile') { renderProfile(); renderMyOrders(); }
+            if (view === 'admin') { renderAdmin(); renderAdminOrders(); renderAdminProducts(); }
+            if (view === 'cart') renderCart();
+            if (view === 'checkout') renderCheckout();
+
+            if (view === 'shop' && PRODUCT_GROUPS.includes(hash)) {
+                $(hash).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.scrollTo(0, 0);
+            }
+        }
+
+        window.addEventListener('hashchange', route);
+
+        /* ---------- Sự kiện ---------- */
+        // Thêm vào giỏ (mọi thẻ sản phẩm)
+        document.addEventListener('click', e => {
+            const btn = e.target.closest('.btn-cart');
+            if (!btn) return;
+            const p = btn.closest('.product');
+            addToCart({
+                id: p.dataset.id,
+                name: p.dataset.name,
+                price: Number(p.dataset.price),
+                image: p.dataset.image
+            });
+            const label = btn.textContent;
+            btn.textContent = 'Đã thêm ✓';
+            setTimeout(() => { btn.textContent = label; }, 1000);
+        });
+
+        $('login-form').addEventListener('submit', e => {
+            e.preventDefault();
+            try {
+                login($('login-email').value, $('login-password').value);
+                const next = sessionStorage.getItem('ss_next') || 'profile';
+                sessionStorage.removeItem('ss_next');
+                location.hash = next;
+            } catch (err) {
+                $('login-msg').textContent = err.message;
+            }
+        });
+
+        $('register-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const password = $('reg-password').value;
+            if (password !== $('reg-confirm').value) {
+                $('reg-msg').textContent = 'Mật khẩu nhập lại không khớp.';
+                return;
+            }
+            try {
+                register({
+                    name: $('reg-name').value,
+                    email: $('reg-email').value,
+                    phone: $('reg-phone').value,
+                    password
+                });
+                login($('reg-email').value, password);
+                location.hash = 'profile';
+            } catch (err) {
+                $('reg-msg').textContent = err.message;
+            }
+        });
+
+        document.querySelectorAll('[data-logout]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                logout();
+                location.hash = '';
+            });
+        });
+
+        $('info-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const user = currentUser();
+            updateUser(user.id, {
+                name: $('p-name').value.trim(),
+                phone: $('p-phone').value.trim(),
+                address: $('p-address').value.trim()
+            });
+            renderProfile();
+            $('info-msg').textContent = 'Đã lưu thông tin.';
+            $('info-msg').classList.add('is-success');
+        });
+
+        $('pw-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const user = currentUser();
+            const msg = $('pw-msg');
+            msg.classList.remove('is-success');
+
+            if ($('pw-current').value !== user.password) {
+                msg.textContent = 'Mật khẩu hiện tại không đúng.';
+            } else if ($('pw-new').value !== $('pw-confirm').value) {
+                msg.textContent = 'Mật khẩu nhập lại không khớp.';
+            } else {
+                updateUser(user.id, { password: $('pw-new').value });
+                e.target.reset();
+                msg.textContent = 'Đã đổi mật khẩu.';
+                msg.classList.add('is-success');
+            }
+        });
+
+        $('search').addEventListener('input', renderAdmin);
+
+        $('user-rows').addEventListener('click', e => {
+            const btn = e.target.closest('button[data-action]');
+            if (!btn || btn.disabled) return;
+            const id = btn.dataset.id;
+            const target = getUsers().find(u => u.id === id);
+            if (!target) return;
+
+            if (btn.dataset.action === 'role') {
+                updateUser(id, { role: target.role === 'admin' ? 'customer' : 'admin' });
+            } else if (btn.dataset.action === 'delete') {
+                if (confirm(`Xóa tài khoản "${target.name}"? Thao tác này không hoàn tác được.`)) {
+                    deleteUser(id);
+                }
+            }
+            renderAdmin();
+        });
+
+        $('order-rows').addEventListener('change', e => {
+            const sel = e.target.closest('select[data-order]');
+            if (sel) updateOrder(sel.dataset.order, { status: sel.value });
+        });
+
+        $('cart-list').addEventListener('click', e => {
+            const q = e.target.closest('[data-qty]');
+            if (q) {
+                changeQty(q.dataset.id, Number(q.dataset.qty));
+                renderCart();
+                return;
+            }
+            const r = e.target.closest('[data-remove]');
+            if (r) {
+                removeFromCart(r.dataset.remove);
+                renderCart();
+            }
+        });
+
+        $('cart-checkout').addEventListener('click', () => {
+            location.hash = 'checkout';
+        });
+
+        $('checkout-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const user = currentUser();
+            const cart = getCart();
+            if (!user || cart.length === 0) return;
+
+            const t = cartTotals(cart);
+            const customer = {
+                name: $('co-name').value.trim(),
+                phone: $('co-phone').value.trim(),
+                address: $('co-address').value.trim()
+            };
+            const order = {
+                id: 'DH' + Date.now().toString(36).toUpperCase(),
+                userId: user.id,
+                customer,
+                note: $('co-note').value.trim(),
+                payment: document.querySelector('input[name="payment"]:checked').value,
+                items: cart.map(i => ({ id: i.id, name: i.name, price: i.price, qty: i.qty, image: i.image })),
+                subtotal: t.subtotal,
+                shipping: t.shipping,
+                total: t.total,
+                status: 'Chờ xác nhận',
+                createdAt: new Date().toISOString()
+            };
+
+            const orders = getOrders();
+            orders.push(order);
+            saveOrders(orders);
+
+            updateUser(user.id, { phone: customer.phone, address: customer.address });
+            saveCart([]);
+
+            alert(`Đặt hàng thành công! Mã đơn của bạn: ${order.id}`);
+            location.hash = 'profile';
+        });
+
+const SEED_PRODUCTS = [
+    {
+        "id": "p1",
+        "name": "Balenciaga Men's T-Shirt",
+        "price": 750,
+        "image": "anh/T-Shirt1.webp",
+        "group": "t-shirt"
+    },
+    {
+        "id": "p2",
+        "name": "Man Balenciaga I Automobili Lamborghini Oversized",
+        "price": 825,
+        "image": "anh/T-Shirt2.webp",
+        "group": "t-shirt"
+    },
+    {
+        "id": "p3",
+        "name": "Balenciaga | SEGA® Oversized T-Shirt",
+        "price": 750,
+        "image": "anh/T-Shirt3.jpg",
+        "group": "t-shirt"
+    },
+    {
+        "id": "p4",
+        "name": "Balenciaga | Sega Oversized T-shirt / Long Sleeves",
+        "price": 975,
+        "image": "anh/T-Shirt4.webp",
+        "group": "t-shirt"
+    },
+    {
+        "id": "p5",
+        "name": "Men's Hooded Bomber in Black",
+        "price": 3550,
+        "image": "anh/jacket1.jpg",
+        "group": "jacket"
+    },
+    {
+        "id": "p6",
+        "name": "Bodies Padded Layered Hoodie",
+        "price": 1790,
+        "image": "anh/jacket2.jpg",
+        "group": "jacket"
+    },
+    {
+        "id": "p7",
+        "name": "Man Balenciaga I Automobili Lamborghini Medium Fit hoodie",
+        "price": 1390,
+        "image": "anh/jacket3.webp",
+        "group": "jacket"
+    },
+    {
+        "id": "p8",
+        "name": "Silver Tape Balenciaga Back Large Zip-up Hoodie",
+        "price": 1590,
+        "image": "anh/jacket4.jpg",
+        "group": "jacket"
+    },
+    {
+        "id": "p9",
+        "name": "Men's Loose Fit Workwear Pants in Black",
+        "price": 1350,
+        "image": "anh/pants1.jpg",
+        "group": "pants"
+    },
+    {
+        "id": "p10",
+        "name": "Men's Denim Stitch Baggy Jeans in Dark Blue",
+        "price": 2690,
+        "image": "anh/pants2.jpg",
+        "group": "pants"
+    },
+    {
+        "id": "p11",
+        "name": "Men's Curved Jeans in Black",
+        "price": 1200,
+        "image": "anh/pants3.jpg",
+        "group": "pants"
+    },
+    {
+        "id": "p12",
+        "name": "Men's Bumper Stickers Baggy Sweatpants in Black",
+        "price": 1250,
+        "image": "anh/pants4.jpg",
+        "group": "pants"
+    },
+    {
+        "id": "p13",
+        "name": "Men's Anchor Crest Signet Ring in Antique Silver",
+        "price": 470,
+        "image": "anh/accs1.jpg",
+        "group": "accessories"
+    },
+    {
+        "id": "p14",
+        "name": "Women's Bb Thin Belt in Black",
+        "price": 495,
+        "image": "anh/accs2.jpg",
+        "group": "accessories"
+    },
+    {
+        "id": "p15",
+        "name": "Balenciaga BB Icon Beads Necklace",
+        "price": 780,
+        "image": "anh/accs3.jpg",
+        "group": "accessories"
+    },
+    {
+        "id": "p16",
+        "name": "Men's Naval Crest Cap in Black",
+        "price": 450,
+        "image": "anh/accs4.jpg",
+        "group": "accessories"
+    }
+];
+
+        /* ---------- Sản phẩm (lưu trong localStorage, admin quản lý) ---------- */
+        const PRODUCTS_KEY = 'ss_products';
+        const GROUP_LABELS = { 't-shirt': 'T-Shirt', 'jacket': 'Jacket', 'pants': 'Pants', 'accessories': 'Accessories' };
+
+        function getProducts() {
+            const raw = localStorage.getItem(PRODUCTS_KEY);
+            if (raw === null) {
+                localStorage.setItem(PRODUCTS_KEY, JSON.stringify(SEED_PRODUCTS));
+                return SEED_PRODUCTS.map(p => ({ ...p }));
+            }
+            return JSON.parse(raw);
+        }
+
+        function saveProducts(products) {
+            localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+        }
+
+        function renderProducts() {
+            const products = getProducts();
+            Object.keys(GROUP_LABELS).forEach(g => {
+                $(g).innerHTML = products.filter(p => p.group === g).map(p => `
+                    <div class="product" data-id="${escapeHtml(p.id)}" data-name="${escapeHtml(p.name)}" data-price="${Number(p.price)}" data-image="${escapeHtml(p.image)}">
+                        <div class="product-image">
+                            <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}">
+                            <div class="add-to-cart"><button class="btn-cart">Thêm vào giỏ</button></div>
+                        </div>
+                        <h3 class="product-name">${escapeHtml(p.name)}</h3>
+                        <p class="price">${fmt(p.price)}</p>
+                    </div>`).join('');
+            });
+        }
+
+        function renderAdminProducts() {
+            const products = getProducts();
+            $('product-rows').innerHTML = products.length
+                ? products.map(p => `
+                    <tr>
+                        <td><img src="${escapeHtml(p.image)}" class="thumb" alt=""></td>
+                        <td>${escapeHtml(p.name)}</td>
+                        <td>${fmt(p.price)}</td>
+                        <td>${escapeHtml(GROUP_LABELS[p.group] || p.group)}</td>
+                        <td><button class="btn-danger" data-del="${escapeHtml(p.id)}">Xóa</button></td>
+                    </tr>`).join('')
+                : '<tr class="empty-row"><td colspan="5">Chưa có sản phẩm nào.</td></tr>';
+        }
+
+        $('product-form').addEventListener('submit', e => {
+            e.preventDefault();
+            const form = e.target;
+            const msg = $('pf-msg');
+            const file = $('pf-image').files[0];
+            msg.classList.remove('is-success');
+
+            if (!file) {
+                msg.textContent = 'Vui lòng chọn ảnh.';
+                return;
+            }
+            if (file.size > 1.5 * 1024 * 1024) {
+                msg.textContent = 'Ảnh quá lớn, tối đa 1.5MB.';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                const products = getProducts();
+                products.push({
+                    id: 'p' + Date.now().toString(36),
+                    name: $('pf-name').value.trim(),
+                    price: Number($('pf-price').value),
+                    image: reader.result,
+                    group: $('pf-group').value
+                });
+                try {
+                    saveProducts(products);
+                } catch (err) {
+                    msg.textContent = 'Không đủ bộ nhớ trình duyệt. Hãy xóa bớt sản phẩm hoặc dùng ảnh nhỏ hơn.';
+                    return;
+                }
+                form.reset();
+                msg.textContent = 'Đã thêm sản phẩm.';
+                msg.classList.add('is-success');
+                renderProducts();
+                renderAdminProducts();
+            };
+            reader.readAsDataURL(file);
+        });
+
+        $('product-rows').addEventListener('click', e => {
+            const btn = e.target.closest('button[data-del]');
+            if (!btn) return;
+            const products = getProducts();
+            const target = products.find(p => p.id === btn.dataset.del);
+            if (target && confirm(`Xóa sản phẩm "${target.name}"?`)) {
+                saveProducts(products.filter(p => p.id !== target.id));
+                renderProducts();
+                renderAdminProducts();
+            }
+        });
+
+        /* ---------- Khởi động ---------- */
+        renderProducts();
+        route();
+    </script>
+
+</body>
+</html>
